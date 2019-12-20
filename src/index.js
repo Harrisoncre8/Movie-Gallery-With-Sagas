@@ -12,7 +12,6 @@ import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects'
 
-
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery(`GET_MOVIE`, getMovieSaga)
