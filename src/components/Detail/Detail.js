@@ -4,6 +4,8 @@ class Detail extends Component {
   render() {
     return (
       <div>
+        <button>Back to List</button>
+        <button>Edit</button>
       </div>
     );
   }

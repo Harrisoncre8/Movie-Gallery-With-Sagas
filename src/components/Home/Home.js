@@ -7,6 +7,10 @@ class Home extends Component {
         this.props.dispatch({type:`GET_MOVIE`});
     }
 
+    handleClick = () => {
+        this.props.history.push('/details');
+    }
+
   render() {
     return (
       <div>
@@ -15,7 +19,7 @@ class Home extends Component {
                         <br/>
                         {item.title}
                         <br/>
-                        <img src={item.poster} alt='image of a movie'/>
+                        <img src={item.poster} alt='Popular movie' onClick={this.handleClick}/>
                         <br/>
                         {item.description}</div>
                 )}
