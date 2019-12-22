@@ -14,14 +14,14 @@ class Detail extends Component {
       <div>
         {this.props.movieRedux.map((detailItem,i) => 
         <div key={i}>
-          <h2>Title: {detailItem.title}</h2>
+          <h2>{detailItem.title}</h2>
           <img src={detailItem.poster} alt="Popular movie"/>
           <p>{detailItem.description}</p>
           <p>Genre: {detailItem.name}</p>
         </div>
         )}
         <button onClick={() => this.props.history.push('/')}>Back to List</button>
-        <button>Edit</button>
+        <button onClick={() => this.props.history.push('/edit')}>Edit</button>
       </div>
     );
   }
