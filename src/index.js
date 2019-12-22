@@ -21,7 +21,7 @@ function* rootSaga() {
 // Handle GET request and response from DB
 function* getMovieSaga(){
     try {
-        const getResponse = yield axios.get('/movie');
+        const getResponse = yield axios.get(`/movie`);
         yield put({ type: 'SET_MOVIES', payload: getResponse.data });
     }
     catch ( error ){
@@ -29,15 +29,15 @@ function* getMovieSaga(){
     }
 }
 
-// Handle selected movie  GET request and response from DB
-function* selectMovieSaga(){    
+// Handle selected movie GET request and response from DB
+function* selectMovieSaga(action){   
+    let id = action.payload; 
     try {
-        console.log('In getMovieSaga');
-        // const getResponse = yield axios.get('/movie');
-        // yield put({ type: 'SET_MOVIES', payload: getResponse.data });
+        const getResponse = yield axios.get(`/movie/${id}`);
+        yield put({ type: 'SET_GENRES', payload: getResponse.data });
     }
     catch ( error ){
-        console.log('Error with GET saga request', error);
+        console.log('Error with select GET saga request', error);
     }
 }
 
