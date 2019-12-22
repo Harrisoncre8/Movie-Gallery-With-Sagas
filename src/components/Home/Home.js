@@ -1,35 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import MovieList from '../MovieList/MovieList';
 
 class Home extends Component {
 
+    // Mounts movies to Home Component from DB
     componentDidMount(){
         this.props.dispatch({type:`GET_MOVIE`});
-    }
-
-    handleClick = () => {
-        this.props.history.push('/details');
     }
 
   render() {
     return (
       <div>
-           {this.props.movieList.map((item,i) => 
-                    <div key={i}>
-                        <br/>
-                        {item.title}
-                        <br/>
-                        <img src={item.poster} alt='Popular movie' onClick={this.handleClick}/>
-                        <br/>
-                        {item.description}</div>
-                )}
+           <MovieList />
       </div>
     );
   }
 }
 
-const mapReduxStateToProps = reduxState => ({
-    movieList: reduxState.movies
-});
-
-export default connect(mapReduxStateToProps)(Home);
+export default connect()(Home);
