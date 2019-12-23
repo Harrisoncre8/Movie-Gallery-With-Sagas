@@ -1,5 +1,4 @@
-# Project Name
-The Movie Gallery
+# The Movie Gallery
 
 ## Description
 
