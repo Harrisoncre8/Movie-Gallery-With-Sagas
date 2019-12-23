@@ -22,8 +22,16 @@ class Edit extends Component {
         })
     }
 
-    // Submit input change to sagas
+    // Submit input change to sagas and updates movie on save
     submitChange = () => {
+        let title = this.state.title;
+        let description = this.state.description
+        if(title === ''){
+            title = this.props.movieRedux.title
+        }
+        if(description === ''){
+            description = this.props.movieRedux.description
+        }
         this.props.dispatch({
             type: `UPDATE_MOVIE`, 
             payload: {
