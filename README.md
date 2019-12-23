@@ -13,8 +13,7 @@ Using the SERN stack, I was able to create an application that sorted movies fro
 ![Wireframe of Movie application](/Users/harrisonnguyen/Prime/Tier2/Weekend-Challenges/movie-sagas-master/wireframes/Screen Shot 2019-12-23 at 1.21.49 AM.png)
 Format: ![Alt Text](url)
 
-![Wireframe of Movie application](wireframes/Screen Shot 2019-12-23 at 1.21.49 AM.png)
-Format: ![Alt Text](url)
+![Wireframe of Movie application]((wireframes/Screen Shot 2019-12-23 at 1.21.49 AM.png)
 
 ![Wireframe of Movie application](wireframes/Screen Shot 2019-12-23 at 1.22.09 AM.png)
 Format: ![Alt Text](url)
