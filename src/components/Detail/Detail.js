@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class Detail extends Component {
 
-  // renders the page with selectMovieSaga and id from route url parameters
+  // Renders the page with selectMovieSaga and id from route url parameters on load
   componentDidMount(){
     const movieId = this.props.match.params.movieId
     this.props.dispatch({type:`SELECT_MOVIE`, payload: movieId});
@@ -15,13 +15,16 @@ class Detail extends Component {
         {this.props.movieRedux.map((detailItem,i) => 
         <div key={i}>
           <h2>{detailItem.title}</h2>
-          <img src={detailItem.poster} alt="Popular movie"/>
+          <img src={detailItem.poster} alt={detailItem.title}/>
           <p>{detailItem.description}</p>
           <p>Genre: {detailItem.name}</p>
         </div>
         )}
         <button onClick={() => this.props.history.push('/')}>Back to List</button>
-        <button onClick={() => this.props.history.push('/edit')}>Edit</button>
+        <button onClick={() => 
+          this.props.history.push(`/edit/${this.props.match.params.movieId}`)}>
+            Edit
+        </button>
       </div>
     );
   }
