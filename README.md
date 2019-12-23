@@ -10,14 +10,10 @@ Using the SERN stack, I was able to create an application that sorted movies fro
 <!-- To see the fully functional site, please visit: DEPLOYED VERSION OF APP -->
 
 ## Wireframe
-![Wireframe of Movie application](/Users/harrisonnguyen/Prime/Tier2/Weekend-Challenges/movie-sagas-master/wireframes/Screen Shot 2019-12-23 at 1.21.49 AM.png)
-Format: ![Alt Text](url)
 
-![Wireframe of Movie application](wireframes/Screen Shot 2019-12-23 at 1.21.49 AM.png)
-Format: ![Alt Text](url)
-
-![Wireframe of Movie application](wireframes/Screen Shot 2019-12-23 at 1.22.09 AM.png)
-Format: ![Alt Text](url)
+![Screenshot 1](wireframes/image1.png)
+![Screenshot 2](wireframes/image2.png)
+![Screenshot 3](wireframes/image3.png)
 
 ### Prerequisites
 
@@ -37,12 +33,12 @@ This is a step by step list for how another developer could get this project up 
 You can use this applicaiton to learn more about movies as well as make edits to the description and title of all the listed movies. 
 
 ## Built With
--- SERN stack
--- SQL
--- Express
--- React
--- Node
--- Material UI
+* SERN stack
+    * SQL
+    * Express
+    * React
+    * Node
+    * Material UI
 
 ## Acknowledgement
 Thanks to Prime Digital Academy in Minneapolis who equipped and helped me to make this application a reality.
