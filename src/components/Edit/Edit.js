@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button, TextField, Grid } from '@material-ui/core/';
 
 class Edit extends Component {
 
@@ -14,7 +15,7 @@ class Edit extends Component {
         this.props.dispatch({type:`SELECT_MOVIE`, payload: movieId});
     }
 
-    // Handle input change
+    // Handle TextField change
     handleChangeFor = (propertyName) => (event) => {
         this.setState({
             ...this.state,
@@ -22,7 +23,7 @@ class Edit extends Component {
         })
     }
 
-    // Submit input change to sagas and updates movie on save
+    // Submit TextField change to sagas and updates movie on save
     submitChange = () => {
         let title = this.state.title;
         let description = this.state.description
@@ -45,20 +46,23 @@ class Edit extends Component {
 
     render(){
         return(
-            <div>
-                <input placeholder="Title"
+            <Grid>
+                <TextField placeholder="Title"
                        onChange={this.handleChangeFor('title')} 
                        defaultValue={this.props.movieRedux.title}/>
-                <input placeholder="Description"
+                <br/>
+                <TextField placeholder="Description"
                        onChange={this.handleChangeFor('description')} 
                        defaultValue={this.props.movieRedux.description}/>
-
-                <button onClick={() => 
+                 <br/>
+                 <br/>
+                <Button size="small" variant="outlined" onClick={() => 
                     this.props.history.push(`/details/${this.props.match.params.movieId}`)}>
                         Cancel
-                </button>
-                <button onClick={this.submitChange}>Save</button>
-            </div>
+                </Button>
+                &nbsp; &nbsp;
+                <Button size="small" variant="outlined" onClick={this.submitChange}>Save</Button>
+            </Grid>
         )
     }
 }
