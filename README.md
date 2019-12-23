@@ -1,4 +1,4 @@
-# Project Name
+# The Movie Gallery
 
 ## Description
 
@@ -10,6 +10,7 @@ Using the SERN stack, I was able to create an application that sorted movies fro
 <!-- To see the fully functional site, please visit: DEPLOYED VERSION OF APP -->
 
 ## Wireframe
+
 
 ![Screenshot 1](wireframes/image1.png)
 ![Screenshot 2](wireframes/image2.png)
