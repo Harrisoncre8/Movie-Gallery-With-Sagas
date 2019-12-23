@@ -1,5 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+// material UI
+import { Button, Grid } from '@material-ui/core/';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    height: 140,
+    width: 100,
+  },
+  control: {
+    padding: theme.spacing.unit * 2,
+  },
+});
+
 
 class Detail extends Component {
 
@@ -11,7 +28,7 @@ class Detail extends Component {
 
   render() {
     return (
-      <div>
+      <Grid container justify='center' alignContent='center'>
         {this.props.movieRedux.map((detailItem,i) => 
         <div key={i}>
           <h2>{detailItem.title}</h2>
@@ -20,12 +37,17 @@ class Detail extends Component {
           <p>Genre: {detailItem.name}</p>
         </div>
         )}
-        <button onClick={() => this.props.history.push('/')}>Back to List</button>
-        <button onClick={() => 
+
+        <Grid>
+        <Button size="small" variant="outlined" 
+                onClick={() => this.props.history.push('/')}>Back to List</Button>
+        &nbsp; &nbsp;
+        <Button size="small" variant="outlined" onClick={() => 
           this.props.history.push(`/edit/${this.props.match.params.movieId}`)}>
             Edit
-        </button>
-      </div>
+        </Button>
+        </Grid>
+      </Grid>
     );
   }
 }
@@ -34,4 +56,4 @@ const mapReduxStateToProps = reduxState => ({
   movieRedux: reduxState.genres
 });
 
-export default connect(mapReduxStateToProps)(Detail);
+export default withStyles(styles)(connect(mapReduxStateToProps)(Detail));
