@@ -4,7 +4,7 @@
 
 Duration: 2 Days
 
-Your project description goes here. What problem did you solve? How did you solve it?
+What problem did you solve? How did you solve it?
 Using the SERN stack, I was able to create an application that sorted movies from a database and displayed it in alphabetical order. Users can edit the title and description of the movies. Improvements to the app of allowing the user to add their own movies coming soon!
 
 <!-- To see the fully functional site, please visit: DEPLOYED VERSION OF APP -->
